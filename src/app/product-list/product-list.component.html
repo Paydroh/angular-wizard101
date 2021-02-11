@@ -1,5 +1,7 @@
-Wizards: {{ min }} / 4 <button (click)="min = min + 1">Join Group</button>
-
+<div *ngIf="min === 1">
+	Wizards: {{ min }} / 4 <button (click)="min = min + 1">Join Group</button>
+</div>
+<ng-template #elseBlock>Wizards: {{ min }} / 4 <button (click)="min = min + 1">Join Group
 <div *ngFor="let product of products">
 	<h3>
 		<a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
