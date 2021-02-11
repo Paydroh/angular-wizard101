@@ -1,8 +1,7 @@
-<div *ngIf="min === 1">
-	Wizards: {{ min }} / 4 <button (click)="min = min + 1">Join Group</button>
+<div *ngIf="min === 1; else elseBlock"> Wizards: {{ min }} / 4 <button (click)="min = min + 1">Join Group</button>
 </div>
-<ng-template #elseBlock>Wizards: {{ min }} / 4 <button (click)="min = min + 1">Join Group
-<div *ngFor="let product of products">
+<ng-template #elseBlock> Wizards: {{ min }} / 4 <button (click)="min = min - 1">Leave Group</button></ng-template>
+<!--<div *ngFor="let product of products">
 	<h3>
 		<a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
 			{{product.name}}
@@ -16,7 +15,7 @@
 
 
 </div>
-
+-->
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
