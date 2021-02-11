@@ -1,4 +1,5 @@
-<h2>Products</h2>
+Wizards: {{ min }} / 4 <button (click)="min = min + 1">Join Group</button>
+
 <div *ngFor="let product of products">
 	<h3>
 		<a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
@@ -11,9 +12,7 @@
 	</p>
 
 
-	<button (click)="join()">
-    Join
-    </button>
+
 </div>
 
 <!-- 

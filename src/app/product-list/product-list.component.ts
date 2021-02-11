@@ -1,6 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 import { products } from "../products";
+
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: "app-product-list",
@@ -8,7 +10,7 @@ import { products } from "../products";
   styleUrls: ["./product-list.component.css"]
 })
 export class ProductListComponent {
-  products = products;
+  min = 1;
 
   share() {
     window.alert("The product has been shared!");
@@ -16,6 +18,7 @@ export class ProductListComponent {
   join() {
     window.alert("You have joined the group!");
   }
+  constructor() {}
 }
 
 /*
